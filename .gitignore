@@ -4,6 +4,9 @@
 # Mac specific
 .DS_Store
 
+# Emacs specific
+*~
+
 # Log file
 *.log
 
