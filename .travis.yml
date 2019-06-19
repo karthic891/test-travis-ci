@@ -5,5 +5,5 @@ jdk:
 services:
   - docker
 
-before_install:
+after_success:
   - docker build -t test-travis .
