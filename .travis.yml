@@ -9,3 +9,4 @@ after_success:
   - echo $CANISTER_DOCKER_USERNAME
   - docker login --username=$CANISTER_DOCKER_USERNAME --password=$CANISTER_DOCKER_PASSWORD cloud.canister.io:5000
   - docker build -t test-travis .
+  - docker push cloud.canister.io:5000/podparkingsolutions/test-travis
