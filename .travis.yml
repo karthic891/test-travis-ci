@@ -6,5 +6,6 @@ services:
   - docker
 
 after_success:
+  - echo $CANISTER_DOCKER_USERNAME
   - echo $CANISTER_DOCKER_PASSWORD | docker login --username=$CANISTER_DOCKER_USERNAME cloud.canister.io:5000
   - docker build -t test-travis .
