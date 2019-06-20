@@ -10,6 +10,6 @@ after_success:
   - docker login --username=$CANISTER_DOCKER_USERNAME --password=$CANISTER_DOCKER_PASSWORD cloud.canister.io:5000
   - docker build .
   - docker image ls
-  - docker tag test-travis1 cloud.canister.io:5000/podparkingsolutions/test-travis
+  - docker tag test-travis cloud.canister.io:5000/podparkingsolutions/test-travis
   - docker image ls
   - docker push cloud.canister.io:5000/podparkingsolutions/test-travis
