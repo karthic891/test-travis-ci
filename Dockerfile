@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk8
+FROM adoptopenjdk/openjdk8:alpine-slim
 
 EXPOSE 8080
 
