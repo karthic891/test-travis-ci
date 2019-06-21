@@ -7,8 +7,8 @@ services:
 
 after_success:
   - echo $CANISTER_DOCKER_USERNAME
-  - docker login --username=$CANISTER_DOCKER_USERNAME --password=$CANISTER_DOCKER_PASSWORD cloud.canister.io:5000
-  - docker build .
+  - echo $CANISTER_DOCKER_PASSWORD | docker login --username=$CANISTER_DOCKER_USERNAME --password-stdin cloud.canister.io:5000
+  - docker build -t travis-ci .
   - docker image ls
   - docker tag test-travis cloud.canister.io:5000/podparkingsolutions/test-travis
   - docker image ls
